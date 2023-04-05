@@ -1,9 +1,19 @@
-const ItemList = (props) => {
-  const { saludo } = props;
+import ItemCard from "./ItemCard";
 
+const ItemList = ({ items }) => {
   return (
-    <div>
-      <h1>{saludo}</h1>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-evenly",
+        flexWrap: "wrap",
+        minHeight: "90vh",
+        padding: "40px",
+      }}
+    >
+      {items.map((item) => {
+        return <ItemCard item={item} key={item.id} />;
+      })}
     </div>
   );
 };
