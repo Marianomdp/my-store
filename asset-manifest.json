@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ola-congelados/static/css/main.bf0c817c.css",
+    "main.js": "/ola-congelados/static/js/main.2b36cfa3.js",
+    "index.html": "/ola-congelados/index.html",
+    "main.bf0c817c.css.map": "/ola-congelados/static/css/main.bf0c817c.css.map",
+    "main.2b36cfa3.js.map": "/ola-congelados/static/js/main.2b36cfa3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf0c817c.css",
+    "static/js/main.2b36cfa3.js"
+  ]
+}
