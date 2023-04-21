@@ -7,8 +7,9 @@ const ItemList = ({ items }) => {
         display: "flex",
         justifyContent: "space-evenly",
         flexWrap: "wrap",
-        minHeight: "90vh",
-        padding: "40px",
+        minHeight: "30vh",
+        padding: "5px",
+        gap: "5px",
       }}
     >
       {items.map((item) => {

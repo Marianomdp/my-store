@@ -5,10 +5,9 @@ const CartWidget = () => {
   return (
     <div
       style={{
+        color: "rgb(56, 204, 204)",
         display: "flex",
-        flexWrap: "wrap",
-        alignContent: "center",
-        margin: "14px",
+        padding: "6px",
       }}
     >
       <span>0</span>

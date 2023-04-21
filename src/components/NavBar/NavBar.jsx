@@ -1,31 +1,31 @@
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import styles from "./NavBar.module.css";
 import CartWidget from "../CartWidget/CartWidget";
+import { Outlet, Link } from "react-router-dom";
 
-const NavBar = () => {
+export const NavBar = () => {
   return (
-    <div className={styles.containerNavbar}>
-      <img
-        style={{ maxWidth: "100%" }}
-        src="https://res.cloudinary.com/dmqsnjyfq/image/upload/v1680577071/ola-congelados-high-resolution-color-logo_ipatq1.png"
-        alt="logo"
-      />
-      <Box sx={{ "& button": { m: 2 } }}>
-        <Button variant="outlined" size="small">
-          INDUSTRIAS
-        </Button>
-        <Button variant="outlined" size="small">
-          MAYORISTAS
-        </Button>
-        <Button variant="outlined" size="small">
-          TIENDA
-        </Button>
-        <Button variant="outlined" size="small">
-          CONTACTO
-        </Button>
-      </Box>
-      <CartWidget />
+    <div>
+      <div className={styles.containerNavbar}>
+        <Link to="/">
+          <img
+            style={{ maxWidth: "140px", margin: "0px" }}
+            src="https://res.cloudinary.com/dmqsnjyfq/image/upload/v1682023806/ola-congelados-high-resolution-color-logo_ipatq1.png"
+            alt="logo"
+          />
+        </Link>
+
+        <div className={styles.categories}>
+          <Link to="/">Todas</Link>
+          <Link to="/category/frutas">Frutas</Link>
+          <Link to="/category/verduras">Verduras</Link>
+          <Link to="http://www.olacongelados.com/tienda">Minoristas</Link>
+          <Link to="http://www.olacongelados.com/contacto">Contacto</Link>
+        </div>
+
+        <CartWidget />
+      </div>
+
+      <Outlet />
     </div>
   );
 };

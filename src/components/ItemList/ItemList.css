@@ -1,0 +1,9 @@
+.itemListContainer {
+  background-color: black;
+  gap: 4px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  min-height: 90vh;
+  padding: 10px;
+}

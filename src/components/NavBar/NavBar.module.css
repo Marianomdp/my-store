@@ -4,4 +4,27 @@
   display: flex;
   justify-content: space-between;
   background-color: #102e44;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: #102e44;
+  font-weight: bold;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0px;
+}
+.categories a {
+  background-color: #102e44;
+  /*padding: 3px 2px;
+  margin: 3px 2px;*/
+  color: rgb(56, 204, 204);
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
 }
