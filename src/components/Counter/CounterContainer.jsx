@@ -2,14 +2,14 @@ import { useState } from "react";
 import CounterPresentation from "./CounterPresentation";
 
 const CounterContainer = ({ stock, onAdd }) => {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(5);
 
   const sumar = () => {
-    counter < stock ? setCounter(counter + 10) : alert("maximo");
+    counter < stock ? setCounter(counter + 1) : alert("maximo");
   };
 
   const restar = () => {
-    setCounter(counter - 10);
+    setCounter(counter - 1);
   };
 
   return (

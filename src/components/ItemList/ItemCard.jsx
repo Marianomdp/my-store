@@ -11,10 +11,10 @@ import {
 
 const ItemCard = ({ item }) => {
   return (
-    <Card sx={{ maxWidth: 150, margin: 1 }}>
-      <CardMedia sx={{ height: 150 }} image={item.img} title="foto" />
+    <Card sx={{ minWidth: 149, maxWidth: 150, Height: 330, margin: 1 }}>
+      <CardMedia sx={{ height: 100 }} image={item.img} title="foto" />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h6" component="div" color="primary">
           {item.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
@@ -24,10 +24,17 @@ const ItemCard = ({ item }) => {
           ${item.price}
         </Typography>
       </CardContent>
-      <CardActions style={{ height: 100 }}>
+      <CardActions
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-evenly",
+          height: 100,
+        }}
+      >
         <Link to={`/ItemDetail/${item.id}`}>
           <Button variant="contained" size="small">
-            Agregar al carrito
+            Detalle
           </Button>
         </Link>
       </CardActions>

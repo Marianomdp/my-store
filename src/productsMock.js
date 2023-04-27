@@ -1,7 +1,7 @@
 export const products = [
   {
     id: 1,
-    title: "Arandanos",
+    title: "Arandanos seleccion",
     price: 1040,
     stock: 10,
     description: "Arandanos congelados IQF grado A",
@@ -10,7 +10,7 @@ export const products = [
   },
   {
     id: 2,
-    title: "Frutillas",
+    title: "Frutillas seleccion",
     price: 860,
     stock: 10,
     description: "Frutillas congeladas IQF grado A",
@@ -19,7 +19,7 @@ export const products = [
   },
   {
     id: 3,
-    title: "Mango",
+    title: "Mango en cubo",
     price: 1420,
     stock: 10,
     description: "Mango congelados IQF cubeteado",
@@ -28,7 +28,7 @@ export const products = [
   },
   {
     id: 4,
-    title: "Durazno",
+    title: "Durazno en cubos",
     price: 1390,
     stock: 10,
     description: "Durazno congelado IQF cubeteado",
@@ -55,7 +55,7 @@ export const products = [
   },
   {
     id: 7,
-    title: "Frambuesas",
+    title: "Frambuesas enteras ",
     price: 3570,
     stock: 10,
     description: "Frambuesa IQF grado A",
@@ -64,7 +64,7 @@ export const products = [
   },
   {
     id: 8,
-    title: "Moras",
+    title: "Moras enteras",
     price: 2190,
     stock: 10,
     description: "Moras IQF grado A",
@@ -91,7 +91,7 @@ export const products = [
   },
   {
     id: 11,
-    title: "Anana",
+    title: "Anana en cubos",
     price: 1540,
     stock: 10,
     description: "Anana en cubos IQF",
@@ -100,7 +100,7 @@ export const products = [
   },
   {
     id: 12,
-    title: "Papaya",
+    title: "Papaya en cubos",
     price: 1430,
     stock: 10,
     description: "Papaya en cubos IQF",
@@ -109,7 +109,7 @@ export const products = [
   },
   {
     id: 13,
-    title: "Açai pulpa",
+    title: "Açai pulpa con guarana  ",
     price: 2180,
     stock: 10,
     description: "Pulpa de Açai con guarana listo para consumir",

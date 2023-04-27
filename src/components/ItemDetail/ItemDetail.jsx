@@ -6,7 +6,7 @@ import CounterContainer from "../Counter/CounterContainer";
 export const ItemDetail = ({ product, onAdd }) => {
   return (
     <div>
-      <div className={styles.containerItemDetail}>
+      <div style={{ display: "flex" }} className={styles.containerItemDetail}>
         <div className={styles.containerImage}>
           <img src={product.img} alt="" />
         </div>
