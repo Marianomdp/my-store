@@ -2,7 +2,28 @@ import styles from "./NavBar.module.css";
 import CartWidget from "../CartWidget/CartWidget";
 import { Outlet, Link } from "react-router-dom";
 
+import { db } from "../../FirebaseConfig";
+import { getDocs, collection } from "firebase/firestore";
+import { useEffect, useState } from "react";
+
 export const NavBar = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    const categoriesCollection = collection(db, "categories");
+    getDocs(categoriesCollection)
+      .then((res) => {
+        let categoriesResult = res.docs.map((category) => {
+          return {
+            ...category.data(),
+            id: category.id,
+          };
+        });
+        setCategories(categoriesResult);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <div>
       <div className={styles.containerNavbar}>
@@ -15,11 +36,13 @@ export const NavBar = () => {
         </Link>
 
         <div className={styles.categories}>
-          <Link to="/">Todas</Link>
-          <Link to="/category/frutas">Frutas</Link>
-          <Link to="/category/verduras">Verduras</Link>
-          <Link to="http://www.olacongelados.com/tienda">Minoristas</Link>
-          <Link to="http://www.olacongelados.com/contacto">Contacto</Link>
+          {categories.map((category) => {
+            return (
+              <Link key={category.id} to={category.path}>
+                {category.title}
+              </Link>
+            );
+          })}
         </div>
 
         <CartWidget />

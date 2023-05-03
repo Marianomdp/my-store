@@ -11,7 +11,7 @@ const CounterPresentation = ({ sumar, restar, counter, onAdd }) => {
           alignItems: "center",
         }}
       >
-        Minimo por producto 10 unidades (caja Cerrada)
+        Minimo por producto 5 unidades.
       </h4>
       <div
         style={{

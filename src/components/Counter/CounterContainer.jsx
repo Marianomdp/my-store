@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CounterPresentation from "./CounterPresentation";
 
-const CounterContainer = ({ stock, onAdd }) => {
-  const [counter, setCounter] = useState(5);
+const CounterContainer = ({ stock, onAdd, initial = 5 }) => {
+  const [counter, setCounter] = useState(initial);
+
+  useEffect(() => {
+    setCounter(initial);
+  }, [initial]);
 
   const sumar = () => {
     counter < stock ? setCounter(counter + 1) : alert("maximo");
