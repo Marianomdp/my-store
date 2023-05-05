@@ -2,12 +2,13 @@ import { ItemDetail } from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { db } from "../../FirebaseConfig";
 import { getDoc, collection, doc } from "firebase/firestore";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 export const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
-
   const { id } = useParams();
+  const { agregarAlCarrito } = useContext(CartContext);
 
   useEffect(() => {
     const itemCollection = collection(db, "products");
@@ -27,8 +28,7 @@ export const ItemDetailContainer = () => {
       ...product,
       quantity: cantidad,
     };
-    console.log(data);
-    // console.log(`se agregaron al carrito ${cantidad} unidad/es del producto ${product.title}`)
+    agregarAlCarrito(data);
   };
 
   return (

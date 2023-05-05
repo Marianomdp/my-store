@@ -3,16 +3,6 @@ import { Button } from "@mui/material";
 const CounterPresentation = ({ sumar, restar, counter, onAdd }) => {
   return (
     <>
-      <h4
-        style={{
-          marginBottom: "10px",
-          display: "flex",
-          gap: "30px",
-          alignItems: "center",
-        }}
-      >
-        Minimo por producto 5 unidades.
-      </h4>
       <div
         style={{
           marginBottom: "10px",

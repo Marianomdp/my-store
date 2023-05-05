@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import CounterPresentation from "./CounterPresentation";
 
-const CounterContainer = ({ stock, onAdd, initial = 5 }) => {
+const CounterContainer = ({ stock, onAdd, initial = 1 }) => {
   const [counter, setCounter] = useState(initial);
 
   useEffect(() => {
@@ -13,7 +13,9 @@ const CounterContainer = ({ stock, onAdd, initial = 5 }) => {
   };
 
   const restar = () => {
-    setCounter(counter - 1);
+    if (counter > 1) {
+      setCounter(counter - 1);
+    }
   };
 
   return (
