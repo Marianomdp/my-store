@@ -1,4 +1,5 @@
 // Import the functions you need from the SDKs you need
+import { RoomPreferencesSharp } from "@mui/icons-material";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -6,12 +7,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAAGf_L1G-7XUGkYlf6p0Q2HHQoF2We27Q",
-  authDomain: "ola-congelados.firebaseapp.com",
-  projectId: "ola-congelados",
-  storageBucket: "ola-congelados.appspot.com",
-  messagingSenderId: "545885117158",
-  appId: "1:545885117158:web:a96c8a7735a69d2ae17927",
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTIS,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
 };
 
 // Initialize Firebase
