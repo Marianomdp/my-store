@@ -20,7 +20,8 @@ export const ItemDetail = ({ product, onAdd, cantidadTotal }) => {
             {product.description}
           </h2>
           <h2 style={{ fontFamily: "monospace" }}>
-            <span style={{ fontSize: "23px" }}>Precio:</span> ${product.price}.-
+            <span style={{ fontSize: "23px" }}>Precio:$</span> ${product.price}
+            .-
           </h2>
         </div>
       </div>

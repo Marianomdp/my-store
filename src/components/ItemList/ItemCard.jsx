@@ -21,7 +21,7 @@ const ItemCard = ({ item }) => {
       }}
     >
       <CardMedia
-        sx={{ height: 100, maxWidth: 100 }}
+        sx={{ height: 100, maxWidth: 100, margin: "auto" }}
         image={item.img}
         title="foto"
       />

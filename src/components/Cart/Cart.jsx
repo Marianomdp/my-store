@@ -36,9 +36,8 @@ const Cart = ({
         <div className="cart-info">
           <h2>Descripcion del carrito:</h2>
           <h3>Cantidad de productos: </h3>
-          <h3>Precio total: $ {total}</h3>
-          <h3>Descuento: </h3>
-          <h3>Precio final: $</h3>
+          <h3>Total de productos: $ {total}</h3>
+          <h3>Envio: $ 600 </h3>
           {cart.length > 0 ? (
             <div className="btn-cart">
               <Button variant="contained" onClick={() => navigate("/checkout")}>
@@ -54,7 +53,7 @@ const Cart = ({
             </Link>
           )}
 
-          <h1>El total del carrito es ${total}</h1>
+          <h1>El total de su compra es ${total + 600}</h1>
         </div>
       </div>
     </div>
