@@ -29,7 +29,7 @@ export const NavBar = () => {
       <div className={styles.containerNavbar}>
         <Link to="/">
           <img
-            style={{ maxWidth: "140px", margin: "0px" }}
+            style={{ maxWidth: "180px", margin: "0px" }}
             src="https://res.cloudinary.com/dmqsnjyfq/image/upload/v1682023806/ola-congelados-high-resolution-color-logo_ipatq1.png"
             alt="logo"
           />

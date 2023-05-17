@@ -1,42 +1,45 @@
 import React from "react";
-import styles from "./ItemDetail.module.css";
 import { Link } from "react-router-dom";
-import { Button } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import CounterContainer from "../Counter/CounterContainer";
-export const ItemDetail = ({ product, onAdd, cantidadTotal }) => {
-  return (
-    <div>
-      <div className={styles.containerItemDetail}>
-        <div className={styles.containerImage}>
-          <img src={product.img} alt="" />
-        </div>
+import styles from "./ItemDetail.module.css";
 
-        <div className={styles.containerDetail}>
-          <h2 style={{ fontFamily: "monospace" }}>
-            <span style={{ fontSize: "23px" }}>Nombre:</span> {product.title}
-          </h2>
-          <h2 style={{ fontFamily: "monospace" }}>
-            <span style={{ fontSize: "23px" }}>Descripcion:</span>{" "}
-            {product.description}
-          </h2>
-          <h2 style={{ fontFamily: "monospace" }}>
-            <span style={{ fontSize: "23px" }}>Precio:$</span> ${product.price}
-            .-
-          </h2>
-        </div>
-      </div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <CounterContainer
-          stock={product.stock}
-          onAdd={onAdd}
-          initial={cantidadTotal}
-        />
-      </div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+const ItemDetail = ({ product, onAdd, cantidadTotal }) => {
+  return (
+    <div className={styles.container}>
+      <Grid container spacing={2} alignItems="center">
+        <Grid item xs={12} md={6} className={styles.imageContainer}>
+          <img className={styles.image} src={product.img} alt="" />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <div className={styles.detailsContainer}>
+            <Typography variant="h2" className={styles.title}>
+              <span className={styles.titleText}>Nombre:</span> {product.title}
+            </Typography>
+            <Typography variant="h3" className={styles.description}>
+              <span className={styles.titleText}>Descripción:</span>{" "}
+              {product.description}
+            </Typography>
+            <Typography variant="h2" className={styles.price}>
+              <span className={styles.titleText}>Precio:$</span> $
+              {product.price}
+              .-
+            </Typography>
+          </div>
+        </Grid>
+      </Grid>
+      <CounterContainer
+        stock={product.stock}
+        onAdd={onAdd}
+        initial={cantidadTotal}
+      />
+      <div className={styles.buttonContainer}>
         <Link to="/">
-          <Button variant="contained">Inicio</Button>
+          <Button variant="contained">Seguir comprando</Button>
         </Link>
       </div>
     </div>
   );
 };
+
+export default ItemDetail;

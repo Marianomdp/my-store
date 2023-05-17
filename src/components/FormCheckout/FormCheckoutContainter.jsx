@@ -14,7 +14,7 @@ import {
   updateDoc,
   doc,
 } from "firebase/firestore";
-import { Typography } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 
 export const FormCheckoutContainer = () => {
   const { cart, getTotalPrice, clearCart } = useContext(CartContext);
@@ -66,11 +66,22 @@ export const FormCheckoutContainer = () => {
   return (
     <div className="checkout-container">
       {orderId ? (
-        <Typography className="h1">
-          Gracias por tu compra, el Id para identificarla es: {orderId}, pronto
-          nos pondremos en contacto para coordinar la entrega y el metodo de
-          pago.
-        </Typography>
+        <Grid container justifyContent="center">
+          <Grid item xs={12} sm={10} md={8} lg={6}>
+            <Box
+              textAlign="center"
+              p={4}
+              border={1}
+              borderRadius={4}
+              borderColor="primary.main"
+              component="h2"
+              variant="h1"
+            >
+              ¡Gracias por tu compra! Nos pondremos en contacto a la brevedad
+              para coordinar la entrega.
+            </Box>
+          </Grid>
+        </Grid>
       ) : (
         <FormCheckout
           errors={errors}

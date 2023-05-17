@@ -1,4 +1,4 @@
-import { ItemDetail } from "./ItemDetail";
+import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { db } from "../../FirebaseConfig";
 import { getDoc, collection, doc } from "firebase/firestore";

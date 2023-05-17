@@ -41,8 +41,16 @@ const CartContextProvider = ({ children }) => {
   };
 
   const deleteProductById = (id) => {
-    const productosFiltrados = cart.filter((elemento) => elemento.id !== id);
-    setCart(productosFiltrados);
+    const productIndex = cart.findIndex((elemento) => elemento.id === id);
+    if (productIndex !== -1) {
+      const updatedCart = [...cart];
+      if (updatedCart[productIndex].quantity > 1) {
+        updatedCart[productIndex].quantity -= 1;
+      } else {
+        updatedCart.splice(productIndex, 1);
+      }
+      setCart(updatedCart);
+    }
   };
 
   const getTotalPrice = () => {
@@ -65,14 +73,36 @@ const CartContextProvider = ({ children }) => {
     return product?.quantity;
   };
 
+  const totalProducts = () => {
+    let total = cart.reduce((acc, elemento) => {
+      return acc + elemento.quantity;
+    }, 0);
+    return total;
+  };
+
+  const plusProductById = (id) => {
+    const updatedCart = cart.map((elemento) => {
+      if (elemento.id === id) {
+        return {
+          ...elemento,
+          quantity: elemento.quantity + 1,
+        };
+      }
+      return elemento;
+    });
+    setCart(updatedCart);
+  };
+
   let data = {
     getTotalQuantity,
     cart,
+    plusProductById,
     agregarAlCarrito,
     clearCart,
     deleteProductById,
     getTotalPrice,
     getQuantityById,
+    totalProducts,
   };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };
