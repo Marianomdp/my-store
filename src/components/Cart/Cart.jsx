@@ -20,16 +20,16 @@ const Cart = ({
             return (
               <div key={item.id} className="cart-item">
                 <img src={item.img} alt="" />
+                <h3>{item.title}</h3>
                 <div className="cart-item-info">
-                  <h3>{item.name}</h3>
                   <h3>${item.price * item.quantity}.-</h3>
                 </div>
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <Button
-                    variant="contained"
                     style={{
-                      fontSize: "12px", // Reducir el tamaño de la fuente
-                      padding: "4px 8px", // Ajustar el padding
+                      fontSize: "12px",
+                      margin: "auto", // Reducir el tamaño de la fuente
+                      padding: "4px 4px", // Ajustar el padding
                       borderRadius: "4px", // Aplicar bordes redondeados
                       color: "#102e44", // Cambiar el color del texto
                     }}
@@ -39,10 +39,10 @@ const Cart = ({
                   </Button>
                   <h3 style={{ margin: "0 8px" }}>{item.quantity}</h3>
                   <Button
-                    variant="contained"
                     style={{
-                      fontSize: "12px", // Reducir el tamaño de la fuente
-                      padding: "4px 8px", // Ajustar el padding
+                      fontSize: "15px",
+                      margin: "auto", // Reducir el tamaño de la fuente
+                      padding: "2px 2px", // Ajustar el padding
                       borderRadius: "4px", // Aplicar bordes redondeados
                       color: "#102e44", // Cambiar el color del texto
                     }}
@@ -62,11 +62,12 @@ const Cart = ({
           <h3>Envio: $ 600 </h3>
           {cart.length > 0 ? (
             <div className="btn-cart">
-              <Button variant="contained" onClick={() => navigate("/checkout")}>
-                Terminar la compra
-              </Button>
+              {" "}
               <Button onClick={clearCartWithAlert} variant="contained">
                 Vaciar carrito
+              </Button>
+              <Button variant="contained" onClick={() => navigate("/checkout")}>
+                Finalizar la compra
               </Button>
             </div>
           ) : (

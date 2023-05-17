@@ -17,7 +17,7 @@ const ItemCard = ({ item }) => {
         maxWidth: 140,
         margin: 1,
         borderInlineColor: "#102e44",
-        backgroundColor: "white",
+        backgroundColor: "#ebf3f8",
       }}
     >
       <CardMedia
@@ -36,16 +36,9 @@ const ItemCard = ({ item }) => {
           ${item.price}
         </Typography>
       </CardContent>
-      <CardActions
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-evenly",
-          height: 100,
-        }}
-      >
+      <CardActions>
         <Link to={`/ItemDetail/${item.id}`}>
-          <Button variant="contained" size="small">
+          <Button variant="contained" size="small" style={{ marginBottom: 1 }}>
             Detalle
           </Button>
         </Link>

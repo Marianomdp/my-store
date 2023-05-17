@@ -14,15 +14,13 @@ const ItemDetail = ({ product, onAdd, cantidadTotal }) => {
         <Grid item xs={12} md={6}>
           <div className={styles.detailsContainer}>
             <Typography variant="h2" className={styles.title}>
-              <span className={styles.titleText}>Nombre:</span> {product.title}
+              <span className={styles.titleText}></span> {product.title}
             </Typography>
             <Typography variant="h3" className={styles.description}>
-              <span className={styles.titleText}>Descripción:</span>{" "}
-              {product.description}
+              <span className={styles.titleText}></span> {product.description}
             </Typography>
             <Typography variant="h2" className={styles.price}>
-              <span className={styles.titleText}>Precio:$</span> $
-              {product.price}
+              <span className={styles.titleText}></span> ${product.price}
               .-
             </Typography>
           </div>
