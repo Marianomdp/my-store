@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Grid, Typography } from "@mui/material";
 import CounterContainer from "../Counter/CounterContainer";
-import styles from "./ItemDetail.module.css";
+import styles from "./ItemDetail.module.css"; // Importa los estilos CSS
 
 const ItemDetail = ({ product, onAdd, cantidadTotal }) => {
   return (
