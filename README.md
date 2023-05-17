@@ -13,7 +13,8 @@
 
 ## Título e imagen de portada
 
-#Ola tienda de congelados
+## Ola tienda de congelados
+
 ![Logo de mi proyecto](/public/ola-congelados-high-resolution-color-logo.png)
 
 ## Descripción del proyecto
@@ -26,15 +27,36 @@
 
 ## Instalación
 
-[]
+Para utilizar este proyecto, sigue estos pasos:
 
-## Uso
+- [Clona este repositorio en tu máquina local utilizando el siguiente comando]
 
-[Inserta aquí una explicación detallada de cómo utilizar tu proyecto, incluyendo los comandos necesarios, opciones y cualquier otra información relevante]
+shell
+Copy code
+git clone https://github.com/Marianomdp/ola-congelados.git
 
-## Ejemplos
+- [Navega al directorio del proyecto]
 
-[Inserta aquí algunos ejemplos de uso de tu proyecto]
+shell
+Copy code
+cd ola-congelados
+
+- [Instala las dependencias necesarias utilizando npm]
+
+shell
+Copy code
+npm install
+
+- [Una vez que se hayan instalado todas las dependencias, puedes ejecutar el proyecto con el siguiente comando]
+
+shell
+Copy code
+npm start
+Esto iniciará la aplicación y podrás acceder a ella en tu navegador en la siguiente dirección: http://localhost:3000.
+
+¡Listo! Ahora puedes comenzar a utilizar el proyecto en tu entorno local.
+
+Recuerda que es posible que necesites tener instalado Node.js y npm en tu máquina antes de poder seguir estos pasos. Si no los tienes instalados, puedes descargar Node.js desde el sitio web oficial: https://nodejs.org.
 
 ## Contribuciones
 
@@ -43,10 +65,10 @@ La creaciond del proyecto es de Mariano Collovatti, para el proyecto final de Co
 
 ## Licencia
 
-[Inserta aquí el tipo de licencia que has elegido para tu proyecto]
+[es privada]
 
 ## Contacto
 
-[Inserta aquí la información de contacto que desees proporcionar, como tu correo electrónico o cualquier otra forma de contacto que prefieras]
+[puedes solicitar cotizaciones o informacion a mariano.collovatti@gmail.com]
 
 ¡Gracias por visitar mi repositorio!
